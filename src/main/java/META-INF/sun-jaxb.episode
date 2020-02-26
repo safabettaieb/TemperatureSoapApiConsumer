@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
+Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2020.02.26 à 11:27:30 PM WAT 
+
+  -->
+  <bindings xmlns:tns="http://www.safa.com/temperature/soap/api/temperatureRequestResponse" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="com.safa.temperature.soap.api.temperatureRequestResponse"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:MinTemperatureRequest">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.MinTemperatureRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:MinTemperatureResponse">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.MinTemperatureResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:MaxTemperatureRequest">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.MaxTemperatureRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:MaxTemperatureResponse">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.MaxTemperatureResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:AvgTemperatureRequest">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.AvgTemperatureRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:AvgTemperatureResponse">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.AvgTemperatureResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:ClosestToZeroTemperatureRequest">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.ClosestToZeroTemperatureRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:closestToZeroTemperatureResponse">
+      <class ref="com.safa.temperature.soap.api.temperatureRequestResponse.ClosestToZeroTemperatureResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
