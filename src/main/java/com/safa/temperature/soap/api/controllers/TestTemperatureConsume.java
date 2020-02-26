@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.safa.temperature.soap.api.services.TemperatureService;
+import com.safa.temperature.soap.api.temperatureRequestResponse.AvgTemperatureRequest;
+import com.safa.temperature.soap.api.temperatureRequestResponse.AvgTemperatureResponse;
 import com.safa.temperature.soap.api.temperatureRequestResponse.MaxTemperatureRequest;
 import com.safa.temperature.soap.api.temperatureRequestResponse.MaxTemperatureResponse;
 import com.safa.temperature.soap.api.temperatureRequestResponse.MinTemperatureRequest;
@@ -26,6 +28,10 @@ public class TestTemperatureConsume {
 	@PostMapping("/max")
 	public MaxTemperatureResponse testConsumeMax(@RequestBody MaxTemperatureRequest request) {
 		return service.getMaxTemperature(request);
+	}
+	@PostMapping("/avg")
+	public AvgTemperatureResponse testConsumeAvg(@RequestBody AvgTemperatureRequest request) {
+		return service.getAvgTemperature(request);
 	}
 
 }
