@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
+
+import com.safa.temperature.soap.api.temperatureRequestResponse.MaxTemperatureRequest;
+import com.safa.temperature.soap.api.temperatureRequestResponse.MaxTemperatureResponse;
 import com.safa.temperature.soap.api.temperatureRequestResponse.MinTemperatureRequest;
 import com.safa.temperature.soap.api.temperatureRequestResponse.MinTemperatureResponse;
 
@@ -24,6 +27,12 @@ public class TemperatureService {
 	public MinTemperatureResponse getMinTemperature(MinTemperatureRequest request) {
 
 		MinTemperatureResponse response = (MinTemperatureResponse) template.marshalSendAndReceive(URL, request);
+		return response;
+	}
+	
+	public MaxTemperatureResponse getMaxTemperature(MaxTemperatureRequest request) {
+
+		MaxTemperatureResponse response = (MaxTemperatureResponse) template.marshalSendAndReceive(URL, request);
 		return response;
 	}
 	
