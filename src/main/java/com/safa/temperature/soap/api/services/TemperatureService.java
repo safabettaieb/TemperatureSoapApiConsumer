@@ -1,5 +1,7 @@
 package com.safa.temperature.soap.api.services;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
@@ -14,10 +16,16 @@ public class TemperatureService {
 	private WebServiceTemplate template;
 	private final String URL = "http://localhost:8081/api";
 
-	public MinTemperatureResponse getMinTemperature(MinTemperatureRequest request) {
+	@PostConstruct
+	public void init() {
 		template = new WebServiceTemplate(marshaller);
+	}
+
+	public MinTemperatureResponse getMinTemperature(MinTemperatureRequest request) {
+
 		MinTemperatureResponse response = (MinTemperatureResponse) template.marshalSendAndReceive(URL, request);
 		return response;
 	}
+	
 
 }

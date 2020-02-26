@@ -9,7 +9,7 @@ public class SoapConfig {
 	@Bean
 	public Jaxb2Marshaller marshaller() {
 		Jaxb2Marshaller marshaller =new Jaxb2Marshaller();
-		marshaller.setPackagesToScan("com.safa.loan.soap.api.temperatureRequestResponse");
+		marshaller.setPackagesToScan("com.safa.temperature.soap.api.temperatureRequestResponse");
 		return marshaller;
 	}
 
